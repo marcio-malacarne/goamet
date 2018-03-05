@@ -1,0 +1,23 @@
+Instruções para utilizar este aplicativo de plotar e classificar dados de ventos.
+
+Primeiramente verifique os parâmetros do arquivo "config.ini", como unidades, colunas e campos do arquivo de dados a serem tratados, o tipo e titulo de grafico a gerar,  nome da estação, fuso horario, formato de data, entre outros.
+o arquivo com o dados deve ter o nome:
+"dados.csv" como o modelo ques egue anexo.
+
+Verifique se esta instalado o Python >=2.7 e as seguintes bibliotecas: MatPlotLib, Numpy, ConfigParser
+
+Apos a verificação acima, entre, via terminal, dentro da pasta e rode o arquivo ventos.py com o o comando
+python ventos.py 
+
+Sera gerado um arquivo com o resumo da rodada com o seguinte nome:
+"Médias-parâmetros-'+ Nome da estacao + Data hoje'.txt",
+juntamente com os graficos.
+
+O arquivo "vel-dir-por-mes.py" é utilizado para gerar uma tabela da velocidade e direção do vento por mes. 
+Verfifique as colunas do mes/ano ou acerte a linhas 60 e 61:
+    mes_coluna=int(data[5:7])
+    ano_coluna=int(data[0:4])
+e linhas 44 e 45:
+ velocidade=col[5] # posição do campo velocidade
+ direcao=col[4] #posição do campo direção
+
